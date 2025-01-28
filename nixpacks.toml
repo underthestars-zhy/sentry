@@ -1,0 +1,10 @@
+[phases.setup]
+nixPkgs = ["...", "docker", "docker-compose"]
+
+[phases.install]
+cmds = [
+  "./install.sh",
+]
+
+[start]
+cmd = "docker compose up --wait"
